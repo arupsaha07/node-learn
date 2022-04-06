@@ -1,0 +1,23 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "Node learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arupsaha07/node-learn.git"
+  },
+  "keywords": [
+    "node",
+    "learn"
+  ],
+  "author": "arup saha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arupsaha07/node-learn/issues"
+  },
+  "homepage": "https://github.com/arupsaha07/node-learn#readme"
+}
