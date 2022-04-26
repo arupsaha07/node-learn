@@ -4,6 +4,7 @@
   "description": "Node learning",
   "main": "index.js",
   "scripts": {
+    "serve": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/arupsaha07/node-learn/issues"
   },
-  "homepage": "https://github.com/arupsaha07/node-learn#readme"
+  "homepage": "https://github.com/arupsaha07/node-learn#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.17.3"
+  }
 }
