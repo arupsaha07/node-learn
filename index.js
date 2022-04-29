@@ -1,6 +1,6 @@
 //---------------------------------------------------------------//
 //                    Middleware in node js                      //
-//     application level middleware. works for all routes        //
+//           middleware used for a particular route              //
 //---------------------------------------------------------------//
 const express = require('express');
 const app = express();
@@ -15,13 +15,13 @@ const reqFilters = (req, res, next) => {
     }
 }
 
-app.use(reqFilters)
+//app.use(reqFilters)
 
 app.get('/', (req, res) => {
     res.send('Welcome to home page');
 })
 
-app.get('/user', (req, res) => {
+app.get('/user',reqFilters, (req, res) => {
     res.send('Welcome to User page');
 })
 
