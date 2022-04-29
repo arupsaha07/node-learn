@@ -1,32 +1,18 @@
 //---------------------------------------------------------------//
-//                    Middleware in node js                      //
-//           middleware used for a particular route              //
+//                    Working with mongodb                       //
 //---------------------------------------------------------------//
-const express = require('express');
-const app = express();
-const reqFilters = require('./middleware');
-const route = express.Router();
 
+const { MongoClient } = require('mongodb');
+const url = 'mongodb://localhost:27017';
+const client = new MongoClient(url);
 
-//app.use(reqFilters)
-route.use(reqFilters);
+let getData = async()=>{
+    let result = await client.connect();
+    let db = result.db('practice-db');
+    let collection = db.collection('products');
+    let response = await collection.find({}).toArray();
 
-app.get('/', (req, res) => {
-    res.send('Welcome to home page');
-})
+    console.log(response);
+};
 
-route.get('/login', (req, res) => {
-    res.send('User is logged in');
-})
-
-route.get('/user', (req, res) => {
-    res.send('User is logged in');
-})
-
-app.get('/contact', (req, res) => {
-    res.send('Welcome to Contact page');
-})
-
-app.use('/',route)
-
-app.listen(5000);
+getData();
