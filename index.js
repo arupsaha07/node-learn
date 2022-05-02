@@ -1,18 +1,11 @@
-//---------------------------------------------------------------//
-//                    Working with mongodb                       //
-//---------------------------------------------------------------//
+const dbConnect = require("./mongodbConnect");
 
-const { MongoClient } = require('mongodb');
-const url = 'mongodb://localhost:27017';
-const client = new MongoClient(url);
 
-let getData = async()=>{
-    let result = await client.connect();
-    let db = result.db('practice-db');
-    let collection = db.collection('products');
-    let response = await collection.find({name:"nord"}).toArray();
 
-    console.log(response);
-};
+const main = async()=>{
+    let data = await dbConnect();
+    data = await data.find().toArray();
+    console.log(data)
+}
 
-getData();
+main();
