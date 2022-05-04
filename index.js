@@ -5,7 +5,7 @@ const dbConnect = require("./mongodbConnect");
 const main = async()=>{
     let data = await dbConnect();
     data = await data.find().toArray();
-    console.log(data)
+    // console.log(data)
 }
 
 main();
