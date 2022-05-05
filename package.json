@@ -4,7 +4,7 @@
   "description": "Node learning",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon app.js",
+    "serve": "nodemon api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +27,7 @@
   "dependencies": {
     "ejs": "^3.1.7",
     "express": "^4.17.3",
-    "mongodb": "^4.5.0"
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.2"
   }
 }
